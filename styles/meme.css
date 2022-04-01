@@ -1,0 +1,48 @@
+.meme-container {
+  background-color: rgb(214, 186, 235);
+  margin:10%;
+  min-width: 200px;
+  max-width: 500px;
+  padding: 20px;
+  box-shadow: 3px 6px 10px 3px rgb(238, 221, 255);
+  font-family: "adonis-web", serif;
+  font-style: normal;
+  font-weight: 400;
+  color: greyscale;
+  text-align: center;
+}
+
+.title-meme {
+  border-bottom: 1px solid lighten(lightblue, 11%);
+  padding-bottom: 17px;
+}
+
+.img-meme{
+	width: 80%;
+	height: 50%;
+	margin-left: 2%;
+	margin-top: 2%;
+}
+
+.img-meme:hover{
+	animation-name: grow-up;
+	animation-duration: 4s;
+}
+
+@keyframes grow-up{
+	50%{transform: scale(1.1, 1.1);};
+	100%{transform: scale(1, 1);};
+}
+
+@media (min-width: 576px) {
+	.meme-container {
+	  margin:5% auto;
+	}
+}
+
+
+@media (min-width: 768px) {
+	.meme-container {
+	  margin:2% auto;
+	}
+}

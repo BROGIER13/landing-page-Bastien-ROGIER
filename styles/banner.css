@@ -1,0 +1,22 @@
+.banner{
+	background-image: url("../images/office.jpg");
+    height: 75vh;
+    background-size: cover;
+    background-position: center;
+    color:white;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.banner h1, .banner h2{
+	text-shadow: 1px 1px 1px black;
+}
+
+@media (min-width: 576px) {
+	.banner{
+		background-position: center;
+	}
+}

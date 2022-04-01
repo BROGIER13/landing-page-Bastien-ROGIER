@@ -1,0 +1,142 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:600,700);
+
+.btn-banner {
+  background-color: rgba(118, 189, 35,1);
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  display: block;
+  width: 25%;
+  border: 1px solid white;
+  transition: 1s;
+  text-align: center;
+  animation-name: colorful;
+  animation-duration: 10s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+.btn-banner:hover {
+  background-color: transparent;
+  color: black;
+  transition: 1s;
+  animation-name: none;
+  border: 1px solid black;
+}
+
+@keyframes colorful {
+  0%   {background-color: rgb(247, 93, 124);}
+  25%  {background-color: rgb(225, 187, 79);}
+  50%  {background-color: rgb(98, 69, 104);}
+  100% {background-color: rgb(142, 123, 55);}
+}
+
+.visible {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  margin-top: 30px;
+}
+
+.button-switch {
+  width: auto;
+  position: relative;
+  margin: 30px 0px 20px 0px;
+}
+
+.button-switch .prompt {
+  display: flex;
+  margin-top: 10px;
+}
+
+.button-switch .well {
+  background: white;
+  height: 20px;
+  width: 65px;
+  position: absolute;
+  right: 50px;
+  top: 7px;
+  border-radius: 10px;
+  box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid #a5d4e4;
+  cursor: pointer;
+}
+
+.button-switch #toggle {
+  opacity: 0;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  height: 29px;
+  width: 140px;
+  background: transparent;
+  position: absolute;
+  right: 0px;
+  top: 3px;
+  cursor: pointer;
+  z-index: 100;
+  color: tranparent;
+}
+
+.button-switch #toggle:after {
+  content: "";
+  background-color: transparent;
+  height: 40px;
+  width: 80px;
+  position: absolute;
+  left: 30px;
+  top: -5px;
+}
+.button-switch #toggle ~ div.kitty:before {
+  content: "🐱";
+  position: absolute;
+  right: 80px;
+  top: -10px;
+  font-size: 45px;
+  z-index: 1;
+  color: #53adcb;
+  transition: all 0.25s ease-out;
+}
+.button-switch #toggle:checked {
+  right: 0px;
+}
+.button-switch #toggle:checked:after {
+  left: -80px;
+}
+.button-switch #toggle:checked ~ div.kitty:before {
+  content: "😺";
+  top: -10px;
+  right: 41px;
+}
+.button-switch #toggle:checked ~ div.visible {
+  opacity: 1;
+  max-height: 900px;
+  overflow: visible;
+}
+.button-switch #toggle ~ label:before {
+  content: "No";
+  position: absolute;
+  color: black;
+  left: -45px;
+  top: 0px;
+  font-size: 16px;
+}
+.button-switch #toggle ~ label:after {
+  content: "Yes";
+  position: absolute;
+  color: black;
+  left: 80px;
+  top: 0px;
+  font-size: 16px;
+}
+.button-switch #toggle:checked ~ label:before {
+  color: black;
+}
+.button-switch #toggle:checked ~ label:after {
+  color: black;
+}
